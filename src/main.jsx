@@ -11,6 +11,7 @@ import Gallery from './components/Gallery/Gallery.jsx';
 import Staff from './components/Staff/Staff.jsx'
 import Registration from './components/Registration/Registration.jsx';
 import { DeveloperTeam } from './components/Developer/Developer.jsx';
+import DevFooter from './components/DevFooter/DevFooter.jsx';
 
 // import Home from './components/Home/Home.jsx';
 
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/registration" element={<Registration />} />
       </Routes>
       <MasterFooter />
+      <DevFooter/>
     </Router>
    </StrictMode>,
 )

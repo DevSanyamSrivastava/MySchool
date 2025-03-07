@@ -25,7 +25,7 @@ const teamMembers = [
 
 export function DeveloperTeam() {
   const [selected, setSelected] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={`min-h-screen p-6 transition-all duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
