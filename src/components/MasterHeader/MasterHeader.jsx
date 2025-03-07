@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <header className="bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-between items-center">
       <div className="text-xl font-bold">
-      <NavLink to="/">
-          <img src={logo} alt="Logo" className="h-16 w-auto" /> 
+        <NavLink to="/">
+          <img src={logo}  alt="Logo" className="h-20 w-auto" />
         </NavLink>
       </div>
       <button
@@ -20,9 +20,8 @@ const Header = () => {
         {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </button>
       <nav
-        className={`w-full md:w-auto transition-all duration-300 ${
-          isOpen ? "block" : "hidden"
-        } md:block`}
+        className={`w-full md:w-auto transition-all duration-300 ${isOpen ? "block" : "hidden"
+          } md:block`}
       >
         <ul className="flex flex-col md:flex-row md:space-x-6 p-4 md:p-0 bg-gray-900 md:bg-transparent w-full md:w-auto">
           <li><NavLink to="/" className="block hover:text-gray-400">Home</NavLink></li>
