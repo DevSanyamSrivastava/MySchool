@@ -156,8 +156,9 @@ const PrincipalMessage = () => {
         <div className="flex-1">
           <h2 className="text-2xl font-bold text-gray-900">Message From Principal</h2>
           <p className="text-gray-700 mt-4">
-            As the principal of this esteemed institution affiliated with BTEUP, our vision is
-            simple yet profound: to equip you with comprehensive practical, formal, and technical knowledge...
+          At XYZ School, we believe that education is not just about academics but also about
+            shaping character and inspiring students to reach their highest potential. Our mission
+            is to nurture responsible citizens through innovation, discipline, and values......
           </p>
           
           {/* Read More Button */}
