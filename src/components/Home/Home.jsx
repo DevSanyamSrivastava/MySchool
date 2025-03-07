@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
+
 // Import images
 import First from "../../assets/slider/First.jpg";
 import Second from "../../assets/slider/Second.jpg";
@@ -36,50 +37,51 @@ const Home = () => {
   };
 
   return (
-    <div className="relative w-screen max-w-screen-lg mx-auto overflow-hidden">
-      {/* Image Container */}
-      <div
-        className="flex flex-nowrap transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Slide ${index + 1}`}
-            className="min-w-full w-full h-auto object-cover"
-          />
-        ))}
-      </div>
+    <div className="bg-white">
+      <div className=" bg-white relative w-screen max-w-screen-lg mx-auto overflow-hidden">
+        {/* Image Container */}
+        <div
+          className="flex flex-nowrap transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Slide ${index + 1}`}
+              className="min-w-full w-full h-[60vh] object-center"
+            />
+          ))}
+        </div>
 
-      {/* Left Arrow */}
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-md hover:bg-gray-700"
-      >
-        <FaArrowLeft size={20} />
-      </button>
+        {/* Left Arrow */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-md hover:bg-gray-700"
+        >
+          <FaArrowLeft size={20} />
+        </button>
 
-      {/* Right Arrow */}
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-md hover:bg-gray-700"
-      >
-        <FaArrowRight size={20} />
-      </button>
+        {/* Right Arrow */}
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-md hover:bg-gray-700"
+        >
+          <FaArrowRight size={20} />
+        </button>
 
-      {/* Dots (Indicators) */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? "bg-gray-900" : "bg-gray-400"
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
+        {/* Dots (Indicators) */}
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${index === currentIndex ? "bg-gray-900" : "bg-gray-400"
+                }`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
+    </div>
     </div>
   );
 };

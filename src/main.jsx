@@ -11,9 +11,9 @@ import Home from './components/Home/Home.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <MasterHeader/>
+    <MasterHeader/> 
       <Home/>
-    <MasterFooter/>
+     <MasterFooter/>
     </BrowserRouter>
   </StrictMode>,
 )
