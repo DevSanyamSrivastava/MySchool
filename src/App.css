@@ -1,2 +1,6 @@
 @plugin "daisyui";
 @import "tailwindcss";
+body {
+    @apply bg-white;
+  }
+  

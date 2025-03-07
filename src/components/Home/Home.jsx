@@ -37,8 +37,8 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white">
-      <div className=" bg-white relative w-screen max-w-screen-lg mx-auto overflow-hidden">
+    
+      <div className=" bg-white mt-5 relative w-screen max-w-screen-lg mx-auto overflow-hidden">
         {/* Image Container */}
         <div
           className="flex flex-nowrap transition-transform duration-700 ease-in-out"
@@ -82,7 +82,7 @@ const Home = () => {
           ))}
         </div>
     </div>
-    </div>
+    
   );
 };
 
