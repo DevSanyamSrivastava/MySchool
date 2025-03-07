@@ -15,7 +15,7 @@ const teamMembers = [
   },
   {
     name: "Kratika Gupta",
-    role: "Backend Developer",
+    role: "UI/UX Developer",
     image: Dev2,
     linkedin: "#",
     github: "#",
