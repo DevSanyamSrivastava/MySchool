@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-between items-center">
       <div className="text-xl font-bold">
       <NavLink to="/">
-          <img src={logo} alt="Logo" className="h-18 w-auto" /> 
+          <img src={logo} alt="Logo" className="h-16 w-auto" /> 
         </NavLink>
       </div>
       <button
