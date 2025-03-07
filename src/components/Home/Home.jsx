@@ -215,7 +215,7 @@ import { FaUserGraduate, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
 export function  CounterSection() {
   const counters = [
     { icon: <FaUserGraduate />, label: "Students", count: 400 },
-    { icon: <FaChalkboardTeacher />, label: "Teachers", count: 12 },
+    { icon: <FaChalkboardTeacher />, label: "Teachers", count: 20 },
     { icon: <FaUsers />, label: "Satisfied Parents", count: 900 },
   ];
 
