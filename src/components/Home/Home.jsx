@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { FaRegCalendarAlt,  FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
 import bg from '../../assets/bgforProfile.jpg'
+import { FaCheckCircle } from "react-icons/fa";
 
 
 // Import images
@@ -180,6 +181,37 @@ const PrincipalMessage = () => {
 
 
 
+const WhyChooseUs = () => {
+  return (
+    <div className="bg-purple-800 text-white py-12 px-6" style={{ backgroundImage: "url('/your-texture-image.jpg')" }}>
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold">Why Choose Gurucharan Das Public School?</h2>
+        <p className="mt-2 text-lg">
+          Gurucharan Das Public School, Sirsi, Lakhimpur-Kheri, is dedicated to providing quality education and holistic development.
+        </p>
+      </div>
+      <div className="max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          "Well-Equipped Classrooms",
+          "Experienced Faculty",
+          "Modern Computer Lab",
+          "Library & Reading Room",
+          "Sports & Extracurricular Activities",
+          "Safe & Secure Environment"
+        ].map((item, index) => (
+          <div key={index} className="flex items-center bg-white text-gray-800 p-4 rounded-lg shadow-lg">
+            <FaCheckCircle className="text-purple-700 text-2xl mr-3" />
+            <span className="font-semibold">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+
+
 
 export default function Home(){
   return(
@@ -187,6 +219,7 @@ export default function Home(){
     <Slider/>
     <CardSection/>
     <PrincipalMessage/>
+    <WhyChooseUs/>
     </> 
   )
 }
