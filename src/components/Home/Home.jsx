@@ -252,8 +252,6 @@ export function  CounterSection() {
 };
 
 
-
-
 export function EnquiryForm(){
   return (
     <div className="container mx-auto p-6">
@@ -279,7 +277,7 @@ export function EnquiryForm(){
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full focus:outline-none placeholder-black"
+                className="w-full text-black placeholder-black focus:outline-none"
               />
             </div>
 
@@ -289,7 +287,7 @@ export function EnquiryForm(){
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full focus:outline-none placeholder-black"
+                className="w-full text-black placeholder-black focus:outline-none"
               />
             </div>
 
@@ -299,7 +297,7 @@ export function EnquiryForm(){
               <input
                 type="tel"
                 placeholder="Your Phone"
-                className="w-full focus:outline-none placeholder-black"
+                className="w-full text-black placeholder-black focus:outline-none"
               />
             </div>
 
@@ -308,7 +306,7 @@ export function EnquiryForm(){
               <FaComments className="text-gray-600 mr-3 mt-1" />
               <textarea
                 placeholder="Your Message"
-                className="w-full focus:outline-none h-20 resize-none placeholder-black"
+                className="w-full text-black placeholder-black focus:outline-none h-20 resize-none"
               ></textarea>
             </div>
 
@@ -322,6 +320,8 @@ export function EnquiryForm(){
     </div>
   );
 };
+
+
 
 
 export default function Home(){
