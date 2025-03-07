@@ -14,7 +14,7 @@ const teamMembers = [
     twitter: "#",
   },
   {
-    name: "Kratika Sharma",
+    name: "Kratika Gupta",
     role: "Backend Developer",
     image: Dev2,
     linkedin: "#",
