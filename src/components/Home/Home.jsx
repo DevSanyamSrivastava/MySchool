@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { FaRegCalendarAlt,  FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
 
 
 // Import images
@@ -7,6 +9,8 @@ import First from "../../assets/slider/First.jpg";
 import Second from "../../assets/slider/Second.jpg";
 import Third from "../../assets/slider/Third.jpg";
 import Fourth from "../../assets/slider/Fourth.jpg";
+//Profile Image
+import Principal from '../../assets/Principal.png'
 
 const images = [First, Second, Third, Fourth];
 
@@ -87,9 +91,6 @@ export function Slider() {
 };
 
 
-
-import { FaRegCalendarAlt, FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
-
 export function Card({ icon, title, description }) {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 text-center border hover:shadow-xl transition-shadow duration-300">
@@ -129,6 +130,51 @@ export function CardSection() {
 }
 
 
+//Messaege
+
+
+const PrincipalMessage = () => {
+  return (
+    <div className="w-full bg-gray-100 px-6 py-12">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 p-6 bg-white shadow-lg rounded-lg relative">
+        {/* Background Texture */}
+        <div className="absolute inset-0 bg-[url('/path-to-texture.png')] opacity-10 pointer-events-none"></div>
+
+        {/* Image Section */}
+        <div className="relative flex-shrink-0">
+          <img
+            src={Principal}
+            alt="Principal"
+            className="w-64 h-64 object-cover rounded-lg shadow-lg"
+          />
+          <div className="bg-blue-600 text-white text-center py-2 rounded-b-lg">
+            <strong>Shri Vinod Kumar</strong>
+          </div>
+        </div>
+
+        {/* Text Section */}
+        <div className="flex-1">
+          <h2 className="text-2xl font-bold text-gray-900">Message From Principal</h2>
+          <p className="text-gray-700 mt-4">
+            As the principal of this esteemed institution affiliated with BTEUP, our vision is
+            simple yet profound: to equip you with comprehensive practical, formal, and technical knowledge...
+          </p>
+          
+          {/* Read More Button */}
+          <NavLink to="/principal-message">
+            <button className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
+              Read More
+            </button>
+          </NavLink>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+
 
 
 
@@ -137,6 +183,7 @@ export default function Home(){
     <>
     <Slider/>
     <CardSection/>
+    <PrincipalMessage/>
     </> 
   )
 }
