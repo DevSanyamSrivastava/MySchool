@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FaRegCalendarAlt,  FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
 import bg from '../../assets/bgforProfile.jpg'
 import { FaCheckCircle } from "react-icons/fa";
 import { FaUser, FaEnvelope, FaPhone, FaComments } from "react-icons/fa";
 import enquiryImage from "../../assets/10308906.jpg"; 
+import Holiday from "../../../public/Document/Holiday.pdf"
 
 
 
@@ -96,15 +97,25 @@ export function Slider() {
 };
 
 
-export function Card({ icon, title, description }) {
+export function Card({ icon, title, description, download }) {
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 text-center border hover:shadow-xl transition-shadow duration-300">
-      <div className="text-red-600 text-4xl mb-4">{icon}</div>
+      <div className="text-blue-500 text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       <p className="text-gray-600 mt-2">{description}</p>
-      <a href="#" className="text-red-600 font-semibold mt-4 inline-block hover:underline">
-        Read More
-      </a>
+      {download ? (
+        <a
+          href={download}
+          download
+          className=" text-blue-700 font-semibold mt-4 inline-block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white transition"
+        >
+          Download PDF
+        </a>
+      ) : (
+        <a href="#" className="text-blue-600 font-semibold mt-4 inline-block hover:underline">
+          Read More
+        </a>
+      )}
     </div>
   );
 }
@@ -115,17 +126,18 @@ export function CardSection() {
       {/* Responsive Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card
-          icon={<FaRegCalendarAlt />}
+          icon={<FaRegCalendarAlt className="text-blue-500 text-4xl" />}
           title="Academic Calendar"
           description="Academic Calendar Provides Activities of whole academic session."
+          download={Holiday} 
         />
         <Card
-          icon={<FaRegFileAlt />}
+          icon={<FaRegFileAlt className="text-blue-500 text-4xl" />}
           title="Online Registration"
           description="Students can submit their online applications for Foundation, and Various courses."
         />
         <Card
-          icon={<FaRegNewspaper />}
+          icon={<FaRegNewspaper className="text-blue-500 text-4xl" />}
           title="School News"
           description="Student and Parents check regularly school notices to stay update."
         />
