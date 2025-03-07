@@ -323,6 +323,66 @@ export function EnquiryForm(){
 
 
 
+import PrincipalImage from "../../../public/MsgDesk/Directer.jpg"; 
+import TeacherImage from "../../../public/MsgDesk/Founder.png"; 
+import StudentImage from "../../../public/MsgDesk/Manager.png"; 
+
+const messages = [
+  {
+    title: "Manager",
+    Name: "Sanjay Srivastava",
+    image: StudentImage,
+    message: "Education empowers us to dream big and achieve greater heights.",
+  },
+  {
+    title: "Founder",
+    Name: "Munna Lal Srivastava",
+    image: TeacherImage,
+    message: "We believe in nurturing creativity and critical thinking in every student.",
+  },
+  {
+    title: "Marketing Head",
+    Name: "Suryansh Srivastava",
+    image: PrincipalImage,
+    message: "Our mission is to provide quality education that builds a strong foundation for the future.",
+  },
+  
+  
+];
+
+export function MessageDesk() {
+  return (
+    <div className="container mx-auto p-6">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        Message Desk
+      </h2>
+
+      {/* Card Container */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {messages.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-xl hover:shadow-2xl border border-gray-300 rounded-2xl p-6 text-center w-full transition"
+          >
+            {/* Image */}
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-[40vh] object-center rounded-2xl mb-4"
+            />
+            {/* Title */}
+            <h3 className="text-xl font-bold text-blue-700">{item.Name}</h3>
+            <h3 className="text-xl font-semibold text-gray-700">{item.title}</h3>
+            {/* Message */}
+            <p className="text-gray-600 mt-2">{item.message}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
 
 export default function Home(){
   return(
@@ -332,6 +392,7 @@ export default function Home(){
     <PrincipalMessage/>
     <WhyChooseUs/>
     <CounterSection/>
+    <MessageDesk/>
     <EnquiryForm/>
     </> 
   )
