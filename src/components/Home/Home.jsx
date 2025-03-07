@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import { FaRegCalendarAlt,  FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
 import bg from '../../assets/bgforProfile.jpg'
 import { FaCheckCircle } from "react-icons/fa";
+import { FaUser, FaEnvelope, FaPhone, FaComments } from "react-icons/fa";
+import enquiryImage from "../../assets/10308906.jpg"; 
 
 
 // Import images
@@ -251,6 +253,77 @@ export function  CounterSection() {
 
 
 
+export function EnquiryForm(){
+  return (
+    <div className="container mx-auto p-6">
+      <div className="flex flex-col md:flex-row items-center justify-center bg-white shadow-lg rounded-lg overflow-hidden">
+        {/* Left Side - Image */}
+        <div className="md:w-1/2 w-full">
+          <img
+            src={enquiryImage}
+            alt="Enquiry"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+
+        {/* Right Side - Form */}
+        <div className="md:w-1/2 w-full p-8 border-l border-gray-300">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Enquiry Form
+          </h2>
+          <form className="space-y-4">
+            {/* Name Field */}
+            <div className="flex items-center border rounded-lg p-2">
+              <FaUser className="text-gray-500 mr-3" />
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full focus:outline-none"
+              />
+            </div>
+
+            {/* Email Field */}
+            <div className="flex items-center border rounded-lg p-2">
+              <FaEnvelope className="text-gray-500 mr-3" />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full focus:outline-none"
+              />
+            </div>
+
+            {/* Phone Field */}
+            <div className="flex items-center border rounded-lg p-2">
+              <FaPhone className="text-gray-500 mr-3" />
+              <input
+                type="tel"
+                placeholder="Your Phone"
+                className="w-full focus:outline-none"
+              />
+            </div>
+
+            {/* Message Field */}
+            <div className="flex items-start border rounded-lg p-2">
+              <FaComments className="text-gray-500 mr-3 mt-1" />
+              <textarea
+                placeholder="Your Message"
+                className="w-full focus:outline-none h-20 resize-none"
+              ></textarea>
+            </div>
+
+            {/* Submit Button */}
+            <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+              Send Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
 
 
 
@@ -263,6 +336,7 @@ export default function Home(){
     <PrincipalMessage/>
     <WhyChooseUs/>
     <CounterSection/>
+    <EnquiryForm/>
     </> 
   )
 }
