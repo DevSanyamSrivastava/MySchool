@@ -8,6 +8,7 @@ import { FaUser, FaEnvelope, FaPhone, FaComments } from "react-icons/fa";
 import enquiryImage from "../../assets/10308906.jpg"; 
 
 
+
 // Import images
 import First from "../../assets/slider/First.jpg";
 import Second from "../../assets/slider/Second.jpg";
@@ -273,41 +274,41 @@ export function EnquiryForm(){
           </h2>
           <form className="space-y-4">
             {/* Name Field */}
-            <div className="flex items-center border rounded-lg p-2">
-              <FaUser className="text-gray-500 mr-3" />
+            <div className="flex items-center border border-black rounded-lg p-2">
+              <FaUser className="text-gray-600 mr-3" />
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full focus:outline-none"
+                className="w-full focus:outline-none placeholder-black"
               />
             </div>
 
             {/* Email Field */}
-            <div className="flex items-center border rounded-lg p-2">
-              <FaEnvelope className="text-gray-500 mr-3" />
+            <div className="flex items-center border border-black rounded-lg p-2">
+              <FaEnvelope className="text-gray-600 mr-3" />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full focus:outline-none"
+                className="w-full focus:outline-none placeholder-black"
               />
             </div>
 
             {/* Phone Field */}
-            <div className="flex items-center border rounded-lg p-2">
-              <FaPhone className="text-gray-500 mr-3" />
+            <div className="flex items-center border border-black rounded-lg p-2">
+              <FaPhone className="text-gray-600 mr-3" />
               <input
                 type="tel"
                 placeholder="Your Phone"
-                className="w-full focus:outline-none"
+                className="w-full focus:outline-none placeholder-black"
               />
             </div>
 
             {/* Message Field */}
-            <div className="flex items-start border rounded-lg p-2">
-              <FaComments className="text-gray-500 mr-3 mt-1" />
+            <div className="flex items-start border border-black rounded-lg p-2">
+              <FaComments className="text-gray-600 mr-3 mt-1" />
               <textarea
                 placeholder="Your Message"
-                className="w-full focus:outline-none h-20 resize-none"
+                className="w-full focus:outline-none h-20 resize-none placeholder-black"
               ></textarea>
             </div>
 
@@ -321,11 +322,6 @@ export function EnquiryForm(){
     </div>
   );
 };
-
-
-
-
-
 
 
 export default function Home(){
