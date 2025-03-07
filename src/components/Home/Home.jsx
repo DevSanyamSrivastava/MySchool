@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { FaRegCalendarAlt,  FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
+import bg from '../../assets/bgforProfile.jpg'
 
 
 // Import images
@@ -135,7 +136,8 @@ export function CardSection() {
 
 const PrincipalMessage = () => {
   return (
-    <div className="w-full bg-gray-100 px-6 py-12">
+    <div   className="w-full bg-cover bg-center bg-no-repeat px-6 py-12"
+    style={{ backgroundImage: `url(${bg})` }}>
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-6 p-6 bg-white shadow-lg rounded-lg relative">
         {/* Background Texture */}
         <div className="absolute inset-0 bg-[url('/path-to-texture.png')] opacity-10 pointer-events-none"></div>
