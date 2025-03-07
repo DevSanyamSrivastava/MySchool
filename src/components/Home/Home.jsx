@@ -10,7 +10,7 @@ import Fourth from "../../assets/slider/Fourth.jpg";
 
 const images = [First, Second, Third, Fourth];
 
-const Home = () => {
+export function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-slide effect every 3 seconds
@@ -86,4 +86,62 @@ const Home = () => {
   );
 };
 
-export default Home;
+
+
+import { FaRegCalendarAlt, FaRegFileAlt, FaRegNewspaper } from "react-icons/fa";
+
+export function Card({ icon, title, description }) {
+  return (
+    <div className="bg-white shadow-lg rounded-lg p-6 text-center border hover:shadow-xl transition-shadow duration-300">
+      <div className="text-red-600 text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+      <p className="text-gray-600 mt-2">{description}</p>
+      <a href="#" className="text-red-600 font-semibold mt-4 inline-block hover:underline">
+        Read More
+      </a>
+    </div>
+  );
+}
+
+export function CardSection() {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      {/* Responsive Grid Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Card
+          icon={<FaRegCalendarAlt />}
+          title="Academic Calendar"
+          description="Academic Calendar Provides Activities of whole academic session."
+        />
+        <Card
+          icon={<FaRegFileAlt />}
+          title="Online Registration"
+          description="Students can submit their online applications for Foundation, and Various courses."
+        />
+        <Card
+          icon={<FaRegNewspaper />}
+          title="School News"
+          description="Student and Parents check regularly school notices to stay update."
+        />
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
+export default function Home(){
+  return(
+    <>
+    <Slider/>
+    <CardSection/>
+    </> 
+  )
+}
+
+
+
+
+
