@@ -183,7 +183,7 @@ const PrincipalMessage = () => {
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-purple-800 text-white py-12 px-6" style={{ backgroundImage: "url('/your-texture-image.jpg')" }}>
+    <div className="bg-purple-800 text-white py-12 px-6" style={{ background: "#0f5476  " }}>
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold">Why Choose Gurucharan Das Public School?</h2>
         <p className="mt-2 text-lg">
@@ -200,7 +200,7 @@ const WhyChooseUs = () => {
           "Safe & Secure Environment"
         ].map((item, index) => (
           <div key={index} className="flex items-center bg-white text-gray-800 p-4 rounded-lg shadow-lg">
-            <FaCheckCircle className="text-purple-700 text-2xl mr-3" />
+            <FaCheckCircle  style={{color: "#0f5476"}} className="text-purple-700 text-2xl mr-3" />
             <span className="font-semibold">{item}</span>
           </div>
         ))}
@@ -208,6 +208,48 @@ const WhyChooseUs = () => {
     </div>
   );
 };
+
+
+import { FaUserGraduate, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
+
+export function  CounterSection() {
+  const counters = [
+    { icon: <FaUserGraduate />, label: "Students", count: 400 },
+    { icon: <FaChalkboardTeacher />, label: "Teachers", count: 12 },
+    { icon: <FaUsers />, label: "Satisfied Parents", count: 900 },
+  ];
+
+  const [counts, setCounts] = useState(counters.map(() => 0));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounts((prevCounts) =>
+        prevCounts.map((count, index) =>
+          count < counters[index].count ? count + 1 : count
+        )
+      );
+    }, 10);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="bg-white-900 text-white py-12 px-6">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        {counters.map((item, index) => (
+          <div key={index} className="flex flex-col items-center p-6 bg-blue-800 rounded-lg shadow-lg">
+            <div className="text-4xl">{item.icon}</div>
+            <h3 className="text-5xl font-bold mt-2">{counts[index]}+</h3>
+            <p className="text-lg mt-2">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+
 
 
 
@@ -220,6 +262,7 @@ export default function Home(){
     <CardSection/>
     <PrincipalMessage/>
     <WhyChooseUs/>
+    <CounterSection/>
     </> 
   )
 }
