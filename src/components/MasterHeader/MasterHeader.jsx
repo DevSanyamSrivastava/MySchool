@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import logo from '../../assets/Logo.jpg'
+import logo from '../../assets/Logo.png'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const Header = () => {
     <header className="bg-gray-900 text-white p-4 flex flex-col md:flex-row justify-between items-center">
       <div className="text-xl font-bold">
       <NavLink to="/">
-          <img src={logo} alt="Logo" className="h-12 w-auto" /> 
+          <img src={logo} alt="Logo" className="h-18 w-auto" /> 
         </NavLink>
       </div>
       <button
