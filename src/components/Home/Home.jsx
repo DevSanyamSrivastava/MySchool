@@ -127,7 +127,7 @@ export function CardSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card
           icon={<FaRegCalendarAlt className="text-blue-500 text-4xl" />}
-          title="Academic Calendar"
+          title="Holiday Calendar"
           description="Academic Calendar Provides Activities of whole academic session."
           download={Holiday} 
         />
