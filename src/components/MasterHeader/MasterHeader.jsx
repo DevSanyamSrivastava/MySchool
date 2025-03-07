@@ -29,7 +29,7 @@ const Header = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-white focus:outline-none"
+        className="md:hidden text-white focus:outline-none flex justify-end"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}

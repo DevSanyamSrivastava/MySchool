@@ -10,6 +10,8 @@ import AboutUs from './components/AboutUs/AboutUs.jsx';
 import Gallery from './components/Gallery/Gallery.jsx';
 import Staff from './components/Staff/Staff.jsx'
 import Registration from './components/Registration/Registration.jsx';
+import { DeveloperTeam } from './components/Developer/Developer.jsx';
+
 // import Home from './components/Home/Home.jsx';
 
 createRoot(document.getElementById('root')).render(
@@ -21,6 +23,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/gallery" element={<Gallery/>} />
         <Route path="/staff" element={<Staff />} />
+        <Route path='/Developer' element={<DeveloperTeam/>}  />
         <Route path="/registration" element={<Registration />} />
       </Routes>
       <MasterFooter />
