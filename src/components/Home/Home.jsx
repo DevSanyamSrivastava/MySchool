@@ -395,25 +395,27 @@ export function MessageDesk() {
   );
 };
 
-
+import Abhishek from '../../../public/OurStudent/Abhishek.jpg'
+import Arjoo from '../../../public/OurStudent/Arjoo.jpg'
+import Ansh from '../../../public/OurStudent/Ansh.jpg'
 
 const students = [
   {
-    name: "Aarav Sharma",
+    name: "Abhishek Srivastava",
     grade: "Class 10",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: Abhishek,
     description: "Top scorer in Science Olympiad and a passionate learner."
   },
   {
-    name: "Sanya Verma",
-    grade: "Class 12",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Arjoo Srivastava",
+    grade: "Class 10",
+    image: Arjoo,
     description: "A national-level debater and an aspiring writer."
   },
   {
-    name: "Rohan Gupta",
+    name: "Ansh Srivastava",
     grade: "Class 8",
-    image: "https://randomuser.me/api/portraits/men/50.jpg",
+    image: Ansh,
     description: "An exceptional artist and football enthusiast."
   }
 ];
