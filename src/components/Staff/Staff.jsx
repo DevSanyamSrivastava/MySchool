@@ -50,8 +50,9 @@ export default function Staff() {
       {/* Toggle Button */}
       <div className="flex justify-center mb-6">
         <button
+        style={{background: "#0D0C22"}}
           onClick={() => setViewMode(viewMode === "table" ? "card" : "table")}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+          className="bg-gray-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
         >
           Switch to {viewMode === "table" ? "Card View" : "Table View"}
         </button>
@@ -61,7 +62,7 @@ export default function Staff() {
       {viewMode === "table" ? (
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-300 shadow-md">
-            <thead className="bg-blue-700 text-white">
+            <thead className="bg-gray-700 text-white">
               <tr className="uppercase text-sm font-semibold">
                 <th className="py-3 px-4 border">Sr No</th>
                 <th className="py-3 px-4 border">Image</th>
