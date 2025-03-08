@@ -396,6 +396,64 @@ export function MessageDesk() {
 
 
 
+
+const faqs = [
+  { 
+    question: "What are the school timings?", 
+    answer: "The school operates from 8:00 AM to 2:00 PM for all students." 
+  },
+  { 
+    question: "How can I apply for admission?", 
+    answer: "You can visit the school office or apply online through our website's Admission section." 
+  },
+  { 
+    question: "Does the school provide transport facilities?", 
+    answer: "Yes, we have a fleet of school buses covering major areas of the city." 
+  },
+  { 
+    question: "What extracurricular activities are available?", 
+    answer: "We offer sports, music, dance, drama, art, and various clubs for holistic development." 
+  },
+  { 
+    question: "Are there scholarships or fee concessions?", 
+    answer: "Yes, we offer scholarships based on merit and financial need. Please contact the school office for details." 
+  },
+];
+
+export  function FAQ(){
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Frequently Asked Questions</h2>
+      <div className="space-y-4">
+        {faqs.map((faq, index) => (
+          <div key={index} className="border-b pb-4">
+            <button 
+              className="flex justify-between w-full text-lg font-medium text-gray-700 hover:text-blue-600 py-3 focus:outline-none"
+              onClick={() => toggleFAQ(index)}
+            >
+              {faq.question}
+              <span>{openIndex === index ? "➖" : "➕"}</span>
+            </button>
+            {openIndex === index && (
+              <p className="text-gray-600 mt-2">{faq.answer}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+
+
+
 export default function Home(){
   return(
     <>
@@ -405,6 +463,7 @@ export default function Home(){
     <WhyChooseUs/>
     <CounterSection/>
     <MessageDesk/>
+    <FAQ/>
     <EnquiryForm/>
     </> 
   )
