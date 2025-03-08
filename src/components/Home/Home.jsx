@@ -399,7 +399,7 @@ export function MessageDesk() {
 
 const students = [
   {
-    name: "Aarav Sharma",
+    name: "Abhishek",
     grade: "Class 10",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
     description: "Top scorer in Science Olympiad and a passionate learner."
