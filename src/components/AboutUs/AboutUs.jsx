@@ -1,7 +1,96 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaBook, FaBus, FaFlask, FaLaptop, FaBasketballBall, FaTheaterMasks } from "react-icons/fa";
+import Vision from '../../../public/MsgDesk/Founder.png'
 
-const AboutUs = () => {
+
+export function About() {
+  const [showMore, setShowMore] = useState(false);
+
+  return (
+    <div className="flex flex-col md:flex-row items-center bg-gray-50 p-8 rounded-2xl shadow-lg">
+      {/* Left Side - Image */}
+      <div className="md:w-1/2 flex justify-center md:justify-start">
+        <img
+          src={Vision} // Replace with actual image URL
+          alt="स्कूल दृष्टि"
+          className="w-[60%] max-w-sm md:max-w-md lg:max-w-lg rounded-xl shadow-lg object-cover"
+        />
+      </div>
+
+      {/* Right Side - Content */}
+      <div className="md:w-1/2 p-6">
+        <h2 className="text-4xl font-bold text-blue-700 mb-6">Our Vision</h2>
+        <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <strong>गुरुचरण दास पब्लिक स्कूल</strong> का उद्देश्य एक 
+          <strong> शिक्षा प्रणाली</strong> विकसित करना है जो छात्रों को न केवल 
+          <strong> शैक्षणिक उत्कृष्टता</strong> बल्कि <strong> मानवीय मूल्यों, आत्मनिर्भरता</strong>, और 
+          <strong> नैतिकता</strong> के साथ सशक्त बनाए।
+        </p>
+
+        {showMore && (
+          <div className="transition-all duration-500 ease-in-out">
+            <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              हम छात्रों में <strong>रचनात्मकता, नवाचार, और नेतृत्व</strong> की भावना को बढ़ावा देते हैं 
+              ताकि वे एक उज्ज्वल भविष्य की ओर अग्रसर हो सकें। शिक्षा केवल पुस्तकों तक सीमित नहीं है; 
+              यह <strong>वास्तविक जीवन की समस्याओं को हल करने</strong> और <strong>समाज में सकारात्मक योगदान</strong> 
+              देने का एक माध्यम है।
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              हमारा विश्वास है कि एक <strong>सशक्त समाज का निर्माण</strong> करने के लिए शिक्षा सबसे 
+              महत्वपूर्ण आधारशिला है। हम छात्रों को <strong>आत्मविश्वास, नैतिकता और चरित्र निर्माण</strong> 
+              के साथ तैयार करने के लिए प्रतिबद्ध हैं।
+            </p>
+          </div>
+        )}
+
+        {/* Button for More Content */}
+        <button
+          onClick={() => setShowMore(!showMore)}
+          className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+        >
+          {showMore ? "Show less" : "Read More"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+
+
+import SchoolImage from "../../../public/images/School.jpg"; // Replace with actual image path
+
+export function EstablishedYear() {
+  return (
+    <div className="flex flex-col md:flex-row items-center bg-gray-50 p-8 rounded-2xl shadow-lg">
+      {/* Left Side - Image */}
+      <div className="md:w-1/2 flex justify-center md:justify-start">
+        <img
+          src={SchoolImage} // Replace with actual image URL
+          alt="स्कूल स्थापना"
+          className="w-[80%] max-w-sm md:max-w-md lg:max-w-lg rounded-xl shadow-lg object-cover"
+        />
+      </div>
+
+      {/* Right Side - Content */}
+      <div className="md:w-1/2 p-6">
+        <h2 className="text-4xl font-bold text-blue-700 mb-6">हमारी स्थापना</h2>
+        <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <strong>गुरुचरण दास पब्लिक स्कूल</strong> की स्थापना वर्ष <strong>2000</strong> में की गई थी। 
+          इस स्कूल का उद्देश्य छात्रों को <strong>उच्च गुणवत्ता वाली शिक्षा</strong> प्रदान करना और 
+          <strong> नैतिक मूल्यों</strong> को विकसित करना है।
+        </p>
+        <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          2000 से, हमारा स्कूल <strong>नवाचार और उत्कृष्टता</strong> के साथ शिक्षा प्रदान कर रहा है। 
+          यहाँ के विद्यार्थी <strong>वैज्ञानिक सोच, आत्मनिर्भरता</strong> और <strong>सामाजिक जिम्मेदारी</strong> की भावना के साथ आगे बढ़ते हैं।
+        </p>
+      </div>
+    </div>
+  );
+}
+
+
+
+export function  Amenities(){
   const amenities = [
     { id: 1, icon: <FaBook size={40} className="text-blue-500" />, title: "Library", desc: "A well-stocked library with a vast collection of books and resources." },
     { id: 2, icon: <FaBus size={40} className="text-yellow-500" />, title: "Transport", desc: "Safe and reliable school bus services for students." },
@@ -33,4 +122,12 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default function AboutUs(){
+  return(
+    <>
+    <About/>
+    <EstablishedYear/>
+    <Amenities/>
+    </>
+  )
+}

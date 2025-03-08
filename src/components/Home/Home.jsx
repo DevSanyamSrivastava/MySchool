@@ -398,25 +398,26 @@ export function MessageDesk() {
 import Abhishek from '../../../public/OurStudent/Abhishek.jpg'
 import Arjoo from '../../../public/OurStudent/Arjoo.jpg'
 import Ansh from '../../../public/OurStudent/Ansh.jpg'
+import Chotu from '../../../public/OurStudent/Chotu.jpg'
 
 const students = [
   {
     name: "Abhishek Srivastava",
     grade: "Class 10",
     image: Abhishek,
-    description: "Top scorer in Science Olympiad and a passionate learner."
+    description: "Top scorer in Science  and a passionate learner."
   },
   {
     name: "Arjoo Srivastava",
     grade: "Class 10",
     image: Arjoo,
-    description: "A national-level debater and an aspiring writer."
+    description: "Aanya Gupta is very good at art and loves to draw."
   },
   {
     name: "Ansh Srivastava",
     grade: "Class 8",
     image: Ansh,
-    description: "An exceptional artist and football enthusiast."
+    description: "Very good at drawing and loves to play football."
   }
 ];
 
@@ -433,10 +434,10 @@ export function OurStudents(){
             <img 
               src={student.image} 
               alt={student.name} 
-              className="w-24 h-24 rounded-full mb-4 border-4 border-blue-500"
+              className="w-36 h-36 rounded-full mb-4 border-4 border-blue-500"
             />
-            <h3 className="text-xl text-blue-800 font-semibold">{student.name}</h3>
-            <p className="text-gray-600">{student.grade}</p>
+            <h3 className="text-xl text-blue-800 font-bold">{student.name}</h3>
+            <p className="text-gray-600 font-semibold">{student.grade}</p>
             <p className="text-gray-500 mt-2">{student.description}</p>
           </div>
         ))}
@@ -452,19 +453,19 @@ export function OurPride(){
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">🌟 Our Pride</h2>
         <p className="text-gray-600 mb-10">
-          Celebrating our outstanding students and faculty members who make us proud.
+          Celebrating our outstanding student who make us proud.
         </p>
 
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div className="max-w-lg   mx-auto bg-white p-6 rounded-lg shadow-lg">
           <img
-            src="https://randomuser.me/api/portraits/men/50.jpg"
+            src={Chotu}
             alt="Pride"
-            className="w-full h-60 object-center rounded-lg"
+            className="w-[100%] h-80 object-center  rounded-lg"
           />
-          <h3 className="text-xl font-semibold text-gray-700 mt-4">John Doe</h3>
-          <p className="text-gray-600 mt-2">🏆 National Science Olympiad Winner</p>
+          <h3 className="text-xl font-bold text-gray-700 mt-4">Anubhav Srivastava</h3>
+          <p className="text-gray-600 text-semibold mt-2">🏆 Navodaya Student</p>
           <p className="text-gray-500 mt-2">
-            John has made our school proud by winning the National Science Olympiad, showcasing his brilliance in STEM.
+            Anubhav has made our school proud by qualifying the Navodaya Entrance Exam, showcasing his acedmic brilliance.
           </p>
         </div>
       </div>
