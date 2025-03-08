@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, useLocation, useNavigate } from "react-router-dom"; // Import useNavigate
 import logo from '../../assets/Logo.png';
 
-const Header = () => {
+export function Nav(){
   const [isOpen, setIsOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const location = useLocation();
@@ -104,4 +104,29 @@ const Header = () => {
   );
 };
 
-export default Header;
+
+import { FaWhatsapp } from "react-icons/fa";
+
+export function WhatsAppButton(){
+  return (
+    <a
+      href="https://wa.me/9161830200?text=Hello! I need more information about the school admission."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-5 right-5 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 flex items-center justify-center"
+    >
+      <FaWhatsapp style={{zIndex: 1000}} className="text-3xl" />
+    </a>
+  );
+};
+
+
+
+export default function MasterHeader(){
+  return(
+    <>
+    <Nav/>
+    <WhatsAppButton/>
+    </>
+  )
+}
