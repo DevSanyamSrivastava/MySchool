@@ -24,6 +24,7 @@ createRoot(document.getElementById('root')).render(
       <MasterHeader /> 
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/Home" element={<Home/>} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path='/gallery' element={<Gallery/>} />
         <Route path="/gallery/video" element={<VideoGallery />} />

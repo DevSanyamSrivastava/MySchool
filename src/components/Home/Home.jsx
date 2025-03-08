@@ -178,13 +178,13 @@ const PrincipalMessage = () => {
         <div className="flex-1">
           <h2 className="text-2xl font-bold text-gray-900">Message From Principal</h2>
           <p className="text-gray-700 mt-4">
-          At XYZ School, we believe that education is not just about academics but also about
+          At <i>Gurucharan Das Public School School,</i>  we believe that education is not just about academics but also about
             shaping character and inspiring students to reach their highest potential. Our mission
             is to nurture responsible citizens through innovation, discipline, and values......
           </p>
           
           {/* Read More Button */}
-          <NavLink to="/principal-message">
+          <NavLink to="/about-us">
             <button className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition">
               Read More
             </button>
