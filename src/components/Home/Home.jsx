@@ -128,7 +128,7 @@ export function CardSection() {
         <Card
           icon={<FaRegCalendarAlt className="text-blue-500 text-4xl" />}
           title="Holiday Calendar"
-          description="Academic Calendar Provides Activities of whole academic session."
+          description="Holiday Calendar Provides Activities of whole academic session."
           download={Holiday} 
         />
         <Card
