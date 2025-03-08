@@ -1,43 +1,53 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaYoutube, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const MasterFooter = () => {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
-      <nav>
-        <h6 className="footer-title">Services</h6>
-        <NavLink to="/branding" className="link link-hover">Branding</NavLink>
-        <NavLink to="/design" className="link link-hover">Design</NavLink>
-        <NavLink to="/marketing" className="link link-hover">Marketing</NavLink>
-        <NavLink to="/advertisement" className="link link-hover">Advertisement</NavLink>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Company</h6>
-        <NavLink to="/about" className="link link-hover">About us</NavLink>
-        <NavLink to="/contact" className="link link-hover">Contact</NavLink>
-        <NavLink to="/jobs" className="link link-hover">Jobs</NavLink>
-        <NavLink to="/press-kit" className="link link-hover">Press kit</NavLink>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Social</h6>
-        <div className="grid grid-flow-col gap-4">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-            </svg>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-            </svg>
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-            </svg>
-          </a>
+    <footer className="bg-gray-900 text-white py-10 px-6 md:px-20">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
+        
+        {/* School Information */}
+        <div className="mb-6 md:mb-0 text-center md:text-left">
+          <h2 className="text-2xl font-bold text-yellow-400">Gurucharan Das Public School</h2>
+          <p className="text-gray-400 mt-2 flex items-center">
+            <FaMapMarkerAlt className="mr-2" /> Sirsi, Lakhimpur-Kheri, Pin: 261506
+          </p>
+          <p className="text-gray-400 flex items-center">
+            <FaPhoneAlt className="mr-2" /> +91 9876543210
+          </p>
+          <p className="text-gray-400 flex items-center">
+            <FaEnvelope className="mr-2" /> info@gcdpschool.com
+          </p>
         </div>
-      </nav>
+
+        {/* Quick Links */}
+        <div className="flex flex-col space-y-2 text-center md:text-left">
+          <h6 className="text-lg font-semibold text-yellow-400">Quick Links</h6>
+          <NavLink to="/about-us" className="hover:text-yellow-400 transition">About Us</NavLink>
+          <NavLink to="/registration" className="hover:text-yellow-400 transition">Admissions</NavLink>
+          <NavLink to="/staff" className="hover:text-yellow-400 transition">Our Staff</NavLink>
+          <NavLink to="/contact" className="hover:text-yellow-400 transition">Contact</NavLink>
+        </div>
+
+        {/* Social Media Links in Column */}
+        <div className="text-center md:text-left">
+          <h6 className="text-lg font-semibold text-yellow-400">Follow Us</h6>
+          <div className="flex flex-col space-y-3 mt-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
+              <FaFacebookF className="text-xl mr-2" /> Facebook
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
+              <FaTwitter className="text-xl mr-2" /> Twitter
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
+              <FaYoutube className="text-xl mr-2" /> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
     </footer>
   );
 };
