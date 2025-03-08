@@ -2,8 +2,10 @@ import React from "react";
 
 
 const videoGallery = [
-  { id: 1, url: "https://www.youtube.com/embed/tgbNymZ7vqY" },
-  { id: 2, url: "https://www.youtube.com/embed/mP0RAo9SKZk" },
+  { id: 1, url: "https://www.youtube.com/embed/M67LBzJpSZM?si=P2t_pSEAgBvjLdQa" },
+  { id: 2, url: "https://www.youtube.com/embed/PbyBf8DD3MI?si=3FLYJ7QqZaDjM-_T" },
+  { id: 3, url: "https://www.youtube.com/embed/58xAQf_fXlM?si=KxVB9dF2K2jwCmtd" },
+ 
 ];
 
 function VideoGallery() {
