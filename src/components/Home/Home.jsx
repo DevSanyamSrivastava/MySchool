@@ -8,6 +8,10 @@ import { FaUser, FaEnvelope, FaPhone, FaComments } from "react-icons/fa";
 import enquiryImage from "../../assets/10308906.jpg"; 
 import Holiday from "../../../public/Document/Holiday.pdf"
 
+import PrincipalImage from "../../../public/MsgDesk/Directer.jpg"; 
+import TeacherImage from "../../../public/MsgDesk/Founder.png"; 
+import StudentImage from "../../../public/MsgDesk/Manager.png"; 
+
 
 
 // Import images
@@ -335,9 +339,6 @@ export function EnquiryForm(){
 
 
 
-import PrincipalImage from "../../../public/MsgDesk/Directer.jpg"; 
-import TeacherImage from "../../../public/MsgDesk/Founder.png"; 
-import StudentImage from "../../../public/MsgDesk/Manager.png"; 
 
 const messages = [
   {
@@ -396,6 +397,78 @@ export function MessageDesk() {
 
 
 
+const students = [
+  {
+    name: "Aarav Sharma",
+    grade: "Class 10",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    description: "Top scorer in Science Olympiad and a passionate learner."
+  },
+  {
+    name: "Sanya Verma",
+    grade: "Class 12",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    description: "A national-level debater and an aspiring writer."
+  },
+  {
+    name: "Rohan Gupta",
+    grade: "Class 8",
+    image: "https://randomuser.me/api/portraits/men/50.jpg",
+    description: "An exceptional artist and football enthusiast."
+  }
+];
+
+export function OurStudents(){
+  return (
+    <div className="max-w-6xl mx-auto p-6">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Meet Our Bright Students</h2>
+      <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-6">
+        {students.map((student, index) => (
+          <div 
+            key={index} 
+            className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center hover:shadow-2xl transition"
+          >
+            <img 
+              src={student.image} 
+              alt={student.name} 
+              className="w-24 h-24 rounded-full mb-4 border-4 border-blue-500"
+            />
+            <h3 className="text-xl text-blue-800 font-semibold">{student.name}</h3>
+            <p className="text-gray-600">{student.grade}</p>
+            <p className="text-gray-500 mt-2">{student.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+export function OurPride(){
+  return (
+    <section className="bg-gray-100 py-12">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">🌟 Our Pride</h2>
+        <p className="text-gray-600 mb-10">
+          Celebrating our outstanding students and faculty members who make us proud.
+        </p>
+
+        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+          <img
+            src="https://randomuser.me/api/portraits/men/50.jpg"
+            alt="Pride"
+            className="w-full h-60 object-center rounded-lg"
+          />
+          <h3 className="text-xl font-semibold text-gray-700 mt-4">John Doe</h3>
+          <p className="text-gray-600 mt-2">🏆 National Science Olympiad Winner</p>
+          <p className="text-gray-500 mt-2">
+            John has made our school proud by winning the National Science Olympiad, showcasing his brilliance in STEM.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const faqs = [
   { 
@@ -464,6 +537,8 @@ export default function Home(){
     <CounterSection/>
     <MessageDesk/>
     <FAQ/>
+    <OurStudents/>
+    <OurPride/>
     <EnquiryForm/>
     </> 
   )
