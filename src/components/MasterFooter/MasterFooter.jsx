@@ -14,10 +14,14 @@ const MasterFooter = () => {
             <FaMapMarkerAlt className="mr-2" /> Sirsi, Lakhimpur-Kheri, Pin: 261506
           </p>
           <p className="text-gray-400 flex items-center">
-            <FaPhoneAlt className="mr-2" /> +91 9876543210
+            
+          <FaPhoneAlt className="mr-2" /> <a href="tel:+919161830200">9161830200</a>
+          
           </p>
           <p className="text-gray-400 flex items-center">
-            <FaEnvelope className="mr-2" /> info@gcdpschool.com
+            <FaEnvelope className="mr-2" />  <a href="mailto:gurucharan6176@gmail.com">
+                gurucharan6176@gmail.com
+                </a>
           </p>
         </div>
 
@@ -40,7 +44,7 @@ const MasterFooter = () => {
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
               <FaTwitter className="text-xl mr-2" /> Twitter
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
+            <a href="https://youtube.com/@mr.suryanshsrivastava3674?feature=shared" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
               <FaYoutube className="text-xl mr-2" /> YouTube
             </a>
           </div>

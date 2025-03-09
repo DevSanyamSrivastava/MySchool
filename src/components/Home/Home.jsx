@@ -116,7 +116,7 @@ export function Card({ icon, title, description, download }) {
           Download PDF
         </a>
       ) : (
-        <a href="#" className="text-blue-600 font-semibold mt-4 inline-block hover:underline">
+        <a href="/registration" className="text-blue-600 font-semibold mt-4 inline-block hover:underline">
           Read More
         </a>
       )}
@@ -247,7 +247,7 @@ export function  CounterSection() {
           count < counters[index].count ? count + 1 : count
         )
       );
-    }, 10);
+    }, 90);
 
     return () => clearInterval(interval);
   }, []);
@@ -411,7 +411,7 @@ const students = [
     name: "Arjoo Srivastava",
     grade: "Class 10",
     image: Arjoo,
-    description: "Aanya Gupta is very good at art and loves to draw."
+    description: "Aarjoo Srivastava is very good at art and loves to draw."
   },
   {
     name: "Ansh Srivastava",
@@ -452,7 +452,7 @@ export function OurPride(){
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">🌟 Our Pride</h2>
-        <p className="text-gray-600 mb-10">
+        <p className="text-gray-600 text-xl font-bold mb-10">
           Celebrating our outstanding student who make us proud.
         </p>
 
@@ -463,7 +463,7 @@ export function OurPride(){
             className="w-[100%] h-80 object-center  rounded-lg"
           />
           <h3 className="text-xl font-bold text-gray-700 mt-4">Anubhav Srivastava</h3>
-          <p className="text-gray-600 text-semibold mt-2">🏆 Navodaya Student</p>
+          <p className="text-gray-600 text-xl font-semibold mt-2">  🏆 Navodaya Student</p>
           <p className="text-gray-500 mt-2">
             Anubhav has made our school proud by qualifying the Navodaya Entrance Exam, showcasing his acedmic brilliance.
           </p>

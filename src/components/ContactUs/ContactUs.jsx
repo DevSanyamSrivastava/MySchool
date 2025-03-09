@@ -40,8 +40,13 @@ export default function ContactUs() {
             <div>
               <h3 className="text-xl font-bold">Email</h3>
               <p className="text-gray-300 text-sm">
-                <a href="mailto:info.nbps@gmail.com" className="text-blue-400 hover:underline">
-                  info.nbps@gmail.com
+                <a href="mailto:gurucharan6176@gmail.com" className="text-blue-400 hover:underline">
+                gurucharan6176@gmail.com
+                </a>
+              </p>
+              <p className="text-gray-300 text-sm">
+                <a href="mailto:ssuryansh382@gmail.com" className="text-blue-400 hover:underline">
+                ssuryansh382@gmail.com
                 </a>
               </p>
             </div>

@@ -1,24 +1,28 @@
 import React from "react";
 import { useState } from "react";
+//Images
+import Naveen from '../../../src/assets/Principal.png'
+import Sanjay from '../../../public/MsgDesk/Manager.png'
+import Suryansh from '../../../public/MsgDesk/Directer.jpg'
 
 const staffMembers = [
   {
     id: 1,
     name: "Naveen Kumar Pandey",
     qualification: "B.Ed. (English)",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    image: Naveen,
   },
   {
     id: 2,
     name: "Sanjay Kumar",
     qualification: "M.A. (Economics)",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    image: Sanjay,
   },
   {
     id: 3,
     name: "Suryansh Srivastava",
     qualification: "M.Sc. (Agronomy)",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
+    image: Suryansh,
   },
   {
     id: 4,

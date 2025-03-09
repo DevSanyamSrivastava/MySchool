@@ -21,7 +21,7 @@ export function About() {
       <div className="md:w-1/2 p-6">
         <h2 className="text-4xl font-bold text-blue-700 mb-6">Our Vision</h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          <strong>गुरुचरण दास पब्लिक स्कूल</strong> का उद्देश्य एक 
+          <strong>गुरुचरन दास पब्लिक स्कूल</strong> का उद्देश्य एक 
           <strong> शिक्षा प्रणाली</strong> विकसित करना है जो छात्रों को न केवल 
           <strong> शैक्षणिक उत्कृष्टता</strong> बल्कि <strong> मानवीय मूल्यों, आत्मनिर्भरता</strong>, और 
           <strong> नैतिकता</strong> के साथ सशक्त बनाए।
@@ -75,7 +75,7 @@ export function EstablishedYear() {
       <div className="md:w-1/2 p-6">
         <h2 className="text-4xl font-bold text-blue-700 mb-6">हमारी स्थापना</h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          <strong>गुरुचरण दास पब्लिक स्कूल</strong> की स्थापना वर्ष <strong>2000</strong> में की गई थी। 
+          <strong>गुरुचरन दास पब्लिक स्कूल</strong> की स्थापना वर्ष <strong>2000</strong> में की गई थी। 
           इस स्कूल का उद्देश्य छात्रों को <strong>उच्च गुणवत्ता वाली शिक्षा</strong> प्रदान करना और 
           <strong> नैतिक मूल्यों</strong> को विकसित करना है।
         </p>
