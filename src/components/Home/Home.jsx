@@ -247,7 +247,7 @@ export function  CounterSection() {
           count < counters[index].count ? count + 1 : count
         )
       );
-    }, 90);
+    }, 20);
 
     return () => clearInterval(interval);
   }, []);
