@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaGithub, FaTwitter, FaSun, FaMoon } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaSun, FaMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Dev1 from "../../../public/Devloper/Sanyam.jpg";
 import Dev2 from "../../../public/Devloper/Kratika.jpg";
@@ -89,7 +89,7 @@ export function DeveloperTeam() {
                 className="text-blue-400 hover:text-blue-600 transition-all duration-300"
                 whileHover={{ scale: 1.2 }}
               >
-                <FaInstragram size={28} />
+                <FaInstagram size={28} />
               </motion.a>
             </div>
           </motion.div>
