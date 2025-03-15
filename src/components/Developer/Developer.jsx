@@ -10,7 +10,7 @@ const teamMembers = [
     role: "Project Manager",
     image: Dev1,
     linkedin: "#",
-    github: "#",
+    github: "https://www.instagram.com/sanyam1032004?igsh=encweGYyNWs4ZXZr",
     twitter: "#",
   },
   {
