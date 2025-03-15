@@ -13,14 +13,14 @@ const teamMembers = [
     github: "#",
     twitter: "https://www.instagram.com/sanyam1032004?igsh=encweGYyNWs4ZXZr",
   },
-  {
+/*  {
     name: "Kratika Gupta",
     role: "UI/UX Developer",
     image: Dev2,
     linkedin: "#",
     github: "#",
     twitter: "#",
-  },
+  }, */
 ];
 
 export function DeveloperTeam() {
