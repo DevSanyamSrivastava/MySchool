@@ -89,7 +89,7 @@ export function DeveloperTeam() {
                 className="text-blue-400 hover:text-blue-600 transition-all duration-300"
                 whileHover={{ scale: 1.2 }}
               >
-                <FaTwitter size={28} />
+                <FaInstragram size={28} />
               </motion.a>
             </div>
           </motion.div>
