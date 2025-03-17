@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import Img1 from "../../../public/ImageGallery/Img1.jpg";
 import Img2 from "../../../public/ImageGallery/Img2.jpg";
 import Img3 from "../../../public/ImageGallery/Img3.jpg";
-import Img4 from "../../../public/ImageGallery/Img4.jpg";
+import Img4 from "../../../public/ImageGallery/img4.jpg";
 import Img5 from "../../../public/ImageGallery/Img5.jpg";
 import Img6 from "../../../public/ImageGallery/Img6.jpg";
 import Img7 from "../../../public/ImageGallery/Img7.jpg";
