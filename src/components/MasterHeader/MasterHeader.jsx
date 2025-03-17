@@ -22,7 +22,7 @@ export function Mark(){
           <FaGraduationCap className="text-yellow-500 mr-2 text-3xl md:text-lg" />
           ❗ प्रवेश प्रारम्भ सत्र 2025-26 - अभी आवेदन करें ❗
           <NavLink
-            href="./registration"
+             to="/registration"
             className="ml-4 px-2 md:px-3 py-1 bg-red-600 text-white font-bold rounded-full shadow-md hover:bg-red-700 transition text-xs md:text-sm"
           >
             Apply Now
