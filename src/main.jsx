@@ -15,12 +15,15 @@ import VideoGallery from './components/Gallery/VideoGallery.jsx';
 import ImageGallery from './components/Gallery/ImageGallery.jsx';
 import { Gallery } from './components/Gallery/Gallery.jsx';
 import ContactUs from './components/ContactUs/ContactUs.jsx';
+import ScrollToTop from '../src/ScrollToTop.js'
 
 // import Home from './components/Home/Home.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
      <Router>
+     <div className="overflow-x-hidden">
+      <ScrollToTop/>
       <MasterHeader /> 
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -36,6 +39,7 @@ createRoot(document.getElementById('root')).render(
       </Routes>
       <MasterFooter />
       <DevFooter/>
+      </div>
     </Router>
    </StrictMode>,
 )
