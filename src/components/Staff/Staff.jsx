@@ -4,6 +4,7 @@ import { useState } from "react";
 import Naveen from '../../../src/assets/Principal.png'
 import Sanjay from '../../../public/MsgDesk/Manager.png'
 import Suryansh from '../../../public/MsgDesk/Directer.jpg'
+import Dummy from '../../../src/assets/teacher.png'
 
 const staffMembers = [
   {
@@ -28,19 +29,19 @@ const staffMembers = [
     id: 4,
     name: "Nanha Lal",
     qualification: "B.Ed. (English)",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: Dummy,
   },
   {
     id: 5,
     name: "Rakesh Kumar Maurya",
     qualification: "M.Sc. (Math)",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: Dummy,
   },
   {
     id: 6,
     name: "Mahmood Ali",
     qualification: "B.Ed. (SST)",
-    image: "https://randomuser.me/api/portraits/men/6.jpg",
+    image: Dummy,
   },
 ];
 

@@ -2,7 +2,49 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/Logo.png";
-import { FaHome, FaInfoCircle, FaImages, FaUser, FaPhone } from "react-icons/fa";
+import New from "../../../public/new.gif"
+import { FaHome, FaInfoCircle, FaImages, FaUser, FaPhone, FaGraduationCap } from "react-icons/fa";
+
+export function Mark(){
+  return (
+    <div className="relative w-full bg-white text-blue-600 py-1 overflow-hidden border-t border-b border-gray-300">
+      <div 
+        className="flex items-center whitespace-nowrap animate-marquee text-base md:text-lg font-bold" 
+        onMouseOver={(e) => e.currentTarget.style.animationPlayState = 'paused'} 
+        onMouseOut={(e) => e.currentTarget.style.animationPlayState = 'running'}
+      >
+        <span className="mr-5 flex items-center">
+          <img 
+            src={New}
+            alt="New" 
+            className="inline-block w-8 md:w-10 h-4 md:h-5 mr-2"
+          />
+          <FaGraduationCap className="text-yellow-500 mr-2 text-3xl md:text-lg" />
+          ❗ प्रवेश प्रारम्भ सत्र 2025-26 - अभी आवेदन करें ❗
+          <a
+            href="/registration"
+            className="ml-4 px-2 md:px-3 py-1 bg-red-600 text-white font-bold rounded-full shadow-md hover:bg-red-700 transition text-xs md:text-sm"
+          >
+            Apply Now
+          </a>
+        </span>
+      </div>
+      <style jsx>{`
+        @keyframes marquee {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+          display: inline-block;
+          white-space: nowrap;
+          animation: marquee 12s linear infinite;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -183,6 +225,7 @@ export function WhatsAppButton() {
 export default function MasterHeader() {
   return (
     <>
+      <Mark />
       <Nav />
       <WhatsAppButton />
     </>

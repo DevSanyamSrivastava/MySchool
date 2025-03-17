@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { FaBook, FaBus, FaFlask, FaLaptop, FaBasketballBall, FaTheaterMasks } from "react-icons/fa";
 import Vision from '../../../public/MsgDesk/Founder.png'
+import Review from '../../../public/Review.png'
 
 
 export function About() {
@@ -122,12 +123,57 @@ export function  Amenities(){
   );
 };
 
+
+
+import { Star } from "lucide-react";
+
+export function RateUs() {
+  const [rating, setRating] = useState(0);
+  const googleReviewLink = "https://shorturl.at/DGUVp";
+
+  const handleRating = (rate) => {
+    setRating(rate);
+    window.open(googleReviewLink, "_self");
+  };
+
+  return (
+    <div className="flex items-center justify-center bg-gray-100">
+      <div className="w-80 p-6 mb-3 bg-white rounded-xl shadow-lg flex flex-col items-center space-y-4">
+        {/* Title */}
+        <h2 className="text-2xl font-semibold text-gray-800">Rate Us</h2>
+
+        {/* Image */}
+        <img 
+          src={Review} 
+          alt="Rate Us" 
+          className="w-20 h-20 rounded-full object-cover"
+        />
+        
+        {/* Star Rating */}
+        <div className="flex space-x-2">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <Star
+              key={star}
+              size={35}
+              className={`cursor-pointer transition-all duration-300 transform hover:scale-110 ${
+                rating >= star ? "text-yellow-500" : "text-gray-300"
+              }`}
+              onClick={() => handleRating(star)}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AboutUs(){
   return(
     <>
     <About/>
     <EstablishedYear/>
     <Amenities/>
+    <RateUs/>
     </>
   )
 }

@@ -11,7 +11,7 @@ const MasterFooter = () => {
         <div className="mb-6 md:mb-0 text-center md:text-left">
           <h2 className="text-2xl font-bold text-yellow-400">Gurucharan Das Public School</h2>
           <p className="text-gray-400 mt-2 flex items-center">
-            <FaMapMarkerAlt className="mr-2" /> Sirsi, Lakhimpur-Kheri, Pin: 261506
+            <FaMapMarkerAlt className="mr-2" /> Sirsi, Lakhimpur-Kheri, Pin: 262724
           </p>
           <p className="text-gray-400 flex items-center">
             
