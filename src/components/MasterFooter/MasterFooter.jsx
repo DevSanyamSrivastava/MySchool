@@ -38,7 +38,7 @@ const MasterFooter = () => {
         <div className="text-center md:text-left">
           <h6 className="text-lg font-semibold text-yellow-400">Follow Us</h6>
           <div className="flex flex-col space-y-3 mt-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
+            <a href="https://www.facebook.com/share/1ADJDrG3o8/" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
               <FaFacebookF className="text-xl mr-2" /> Facebook
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition flex items-center">
